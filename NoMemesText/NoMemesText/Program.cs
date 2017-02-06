@@ -16,19 +16,21 @@ namespace NoMemesText
 {
     class Program
     {
-        
-        
-        
+
+
+        static string loginPassword;
 
         static void Main(string[] args)
         {
+            if (args.Length == 0)
+            {
+                return;
+            }
+            loginPassword = args[0];
 
-            //List<string> s;
+            UserHandler.getInstance().setPassword(loginPassword);
 
-            
-            //stuff();
-
-            emailChecker ec = new emailChecker();
+            emailChecker ec = new emailChecker(loginPassword);
             Thread t = new Thread(new ThreadStart(ec.checkMailLoop));
             t.Start();
 
@@ -47,16 +49,13 @@ namespace NoMemesText
 
                 try
                 {
-                    //sendMessage(s, "patg.lenyeto@gmail.com");
-                    //Map.getInstance().createImage();
-                    //sendMessageWithAttachment(s, "5137671027@mms.att.net", "tmpMap.png");
+                    
                 }
                 catch (Exception e)
                 {
                     Console.Write(e);
                 }
 
-                //Console.Clear();
             }
 
 
@@ -69,7 +68,7 @@ namespace NoMemesText
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
             SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("nomemestext", "NoMemesPassword");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("nomemestext", loginPassword);
 
             mail.To.Add(email);
 
@@ -89,7 +88,7 @@ namespace NoMemesText
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
             SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("nomemestext", "NoMemesPassword");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("nomemestext", loginPassword);
 
             mail.To.Add(email);
 
@@ -120,7 +119,7 @@ namespace NoMemesText
         {
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
             SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("nomemestext", "NoMemesPassword");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("nomemestext", loginPassword);
         }
         
         
@@ -129,7 +128,7 @@ namespace NoMemesText
             using (Pop3 pop3 = new Pop3())
             {
                 pop3.ConnectSSL("pop.gmail.com");
-                pop3.Login("no.memes.text", "NoMemesPassword");
+                pop3.Login("no.memes.text", loginPassword);
 
                 MailBuilder builder = new MailBuilder();
                 foreach (var uid in pop3.GetAll())

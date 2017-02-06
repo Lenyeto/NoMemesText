@@ -14,9 +14,11 @@ namespace NoMemesText
     public class emailChecker
     {
         public bool shouldRun;
+        string password;
 
-        public emailChecker()
+        public emailChecker(string pass)
         {
+            password = pass;
             shouldRun = true;
         }
 
@@ -24,17 +26,17 @@ namespace NoMemesText
         {
             while (shouldRun)
             {
-                checkMail();
+                checkMail(password);
                 Thread.Sleep(10);
             }
         }
 
-        static void checkMail()
+        static void checkMail(string password)
         {
             using (Pop3 pop3 = new Pop3())
             {
                 pop3.ConnectSSL("pop.gmail.com");
-                pop3.Login("no.memes.text", "NoMemesPassword");
+                pop3.Login("no.memes.text", password);
 
                 MailBuilder builder = new MailBuilder();
                 foreach (var uid in pop3.GetAll())
@@ -119,12 +121,12 @@ namespace NoMemesText
 
         }
 
-        public static void sendMessage(string msg, string email)
+        public static void sendMessage(string msg, string email, string password)
         {
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
             SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("nomemestext", "NoMemesPassword");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("nomemestext", password);
 
             mail.To.Add(email);
 

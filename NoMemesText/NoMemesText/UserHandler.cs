@@ -11,10 +11,16 @@ namespace NoMemesText
         static UserHandler m_instance;
         Dictionary<string, User> users;
 
+        string password;
 
         private UserHandler()
         {
             users = new Dictionary<string, User>();
+        }
+
+        public void setPassword(string pass)
+        {
+            password = pass;
         }
 
         public static UserHandler getInstance()
@@ -38,7 +44,7 @@ namespace NoMemesText
                 {
                     if (u.Value.hasMessage)
                     {
-                        emailChecker.sendMessage(u.Value.message, u.Key);
+                        emailChecker.sendMessage(u.Value.message, u.Key, password);
                         u.Value.setHasMessage(false);
 
                         //user newU = new user();

@@ -1,0 +1,1 @@
+NoMemesText is an open source text based adventure game utilizing mobile text messaging and emails to interact with the game.

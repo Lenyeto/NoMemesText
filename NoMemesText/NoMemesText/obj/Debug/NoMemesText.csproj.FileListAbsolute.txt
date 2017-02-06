@@ -11,3 +11,13 @@ C:\Users\patgl\Dropbox\NoMemesText\VS2015\NoMemesText\NoMemesText\obj\Debug\NoMe
 C:\Users\patgl\Dropbox\NoMemesText\VS2015\NoMemesText\NoMemesText\obj\Debug\NoMemesText.csproj.GenerateResource.Cache
 C:\Users\patgl\Dropbox\NoMemesText\VS2015\NoMemesText\NoMemesText\obj\Debug\NoMemesText.exe
 C:\Users\patgl\Dropbox\NoMemesText\VS2015\NoMemesText\NoMemesText\obj\Debug\NoMemesText.pdb
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Debug\NoMemesText.exe.config
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Debug\NoMemesText.exe
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Debug\NoMemesText.pdb
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Debug\NoMemesText.csprojResolveAssemblyReference.cache
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Debug\NoMemesText.Properties.Resources.resources
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Debug\NoMemesText.csproj.GenerateResource.Cache
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Debug\NoMemesText.exe
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Debug\NoMemesText.pdb
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Debug\Mail.dll
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Debug\Mail.xml
