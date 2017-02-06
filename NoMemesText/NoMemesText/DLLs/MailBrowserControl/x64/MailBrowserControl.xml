@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MailBrowserControl</name>
+    </assembly>
+    <members>
+        <member name="T:Limilabs.Windows.MhtDataProvider">
+            <summary>
+            Represents text/html and text/plain mht data provider for the <see cref="T:Limilabs.Windows.MailBrowserControl"/>.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.MhtDataProvider.#ctor(Limilabs.Mail.IMail)">
+            <summary>
+            Creates new MhtDataProvider object.
+            </summary>
+            <param name="mail">Mht document to extract data from.</param>
+        </member>
+        <member name="M:Limilabs.Windows.MhtDataProvider.GetProtocols">
+            <summary>
+            Gets the protocol list handled by this provider.
+            "Http:" protocol is handled by this provider.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.MhtDataProvider.GetHtml">
+            <summary>
+            Gets the HTML or plain text data.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.MhtDataProvider.GetData(System.String)">
+            <summary>
+            Gets the data using <see cref="P:Limilabs.Mail.MIME.MimeBase.ContentLocation"/> of the elements.
+            </summary>
+            <param name="url">Url of the data.</param>
+            <returns>Data for the specified url.</returns>
+        </member>
+        <member name="T:Limilabs.Windows.IHtmlDataProvider">
+            <summary>
+            Represents HTML data provider for the WebBrowserControl.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.IHtmlDataProvider.GetProtocols">
+            <summary>
+            Gets the protocol list handled by this provider.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.IHtmlDataProvider.GetHtml">
+            <summary>
+            Gets the HTML data.
+            </summary>
+        </member>
+        <member name="T:Limilabs.Windows.MailBrowserControl">
+            <summary>
+            Enables users show e-mail content inside a form.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.MailBrowserControl.#ctor">
+            <summary>
+            Creates new MailBrowserControl object.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.MailBrowserControl.Navigate(Limilabs.Windows.IHtmlDataProvider)">
+            <summary>
+            Loads the HTML provider into the <see cref="T:Limilabs.Windows.MailBrowserControl"/>.
+            </summary>
+            <param name="provider">HTML data provider to load.</param>
+            <returns>Returns <c>true</c> on success, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:Limilabs.Windows.MailHtmlDataProvider">
+            <summary>
+            Represents text/html and text/plain email data provider for the <see cref="T:Limilabs.Windows.MailBrowserControl"/>.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.MailHtmlDataProvider.#ctor(Limilabs.Mail.IMail)">
+            <summary>
+            Creates new MailHtmlDataProvider object.
+            </summary>
+            <param name="mail">Email to extract data from.</param>
+        </member>
+        <member name="M:Limilabs.Windows.MailHtmlDataProvider.GetProtocols">
+            <summary>
+            Gets the protocol list handled by this provider.
+            Only "Cid:" protocol is handled by this provider.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.MailHtmlDataProvider.GetHtml">
+            <summary>
+            Gets the HTML or plain text data.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Windows.MailHtmlDataProvider.GetData(System.String)">
+            <summary>
+            Gets the data for cid protocol elements.
+            </summary>
+            <param name="url">Url of the data</param>
+            <returns>Data for the specified url.</returns>
+        </member>
+    </members>
+</doc>
