@@ -127,5 +127,14 @@ namespace NoMemesText
 
             return cr;
         }
+
+        public static choiceResult getInventory(User u)
+        {
+            choiceResult cr = new choiceResult();
+
+
+
+            return cr;
+        }
     }
 }

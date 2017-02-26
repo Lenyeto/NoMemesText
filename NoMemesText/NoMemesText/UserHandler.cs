@@ -11,6 +11,8 @@ namespace NoMemesText
         static UserHandler m_instance;
         Dictionary<string, User> users;
 
+        public bool shouldRun = true;
+
         string password;
 
         private UserHandler()
@@ -35,7 +37,7 @@ namespace NoMemesText
 
         public void updateUsers()
         {
-            while (true)
+            while (shouldRun)
             {
 
                 List<KeyValuePair<string, User>> tmp = new List<KeyValuePair<string, User>>();

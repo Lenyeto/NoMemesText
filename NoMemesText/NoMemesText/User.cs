@@ -13,6 +13,7 @@ namespace NoMemesText
     }
 
 
+
     public struct User
     {
         //Whether or not the player has a pending message.
@@ -20,7 +21,6 @@ namespace NoMemesText
 
         //The next message that will be sent to the user.
         public string message;
-
 
         //The current position of the player.
         public Coords pos;

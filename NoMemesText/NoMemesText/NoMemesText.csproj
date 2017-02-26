@@ -64,6 +64,8 @@
   <ItemGroup>
     <Compile Include="choiceProcessor.cs" />
     <Compile Include="emailChecker.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemDictionary.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +79,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Quest.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserHandler.cs" />
   </ItemGroup>

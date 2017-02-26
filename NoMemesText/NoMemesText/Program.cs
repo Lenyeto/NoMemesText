@@ -16,12 +16,21 @@ namespace NoMemesText
 {
     class Program
     {
+        // A lock for changing and sending the map image.
+        public static Mutex mapLock;
 
+        // A lock for changing when the mail should be changed.
+        public static Mutex mailLock;
+
+        public static bool isRunning = true;
 
         static string loginPassword;
 
         static void Main(string[] args)
         {
+            mapLock = new Mutex();
+            mailLock = new Mutex();
+
             if (args.Length == 0)
             {
                 return;
@@ -37,24 +46,34 @@ namespace NoMemesText
             Thread t2 = new Thread(new ThreadStart(UserHandler.getInstance().updateUsers));
             t2.Start();
 
-            while (true)
+            while (isRunning)
             {
                 
 
                 string s = Console.In.ReadLine();
 
+                if (s.Equals("exit") || s.Equals("quit"))
+                {
+                    // Tells this loop that it will end at the end of the loop.
+                    isRunning = false;
+
+                    // Sets the email checker to stop looping.
+                    ec.shouldRun = false;
+
+                    // Sets the user updater to stop looping.
+                    UserHandler.getInstance().shouldRun = false;
+
+                    // Sets the email checking thread to join this thread.
+                    t.Join();
+
+                    // Sets the user checking thread to join this thread.
+                    t2.Join();
+
+                }
+
                 Console.Out.WriteLine(s);
 
-
-
-                try
-                {
-                    
-                }
-                catch (Exception e)
-                {
-                    Console.Write(e);
-                }
+                
 
             }
 

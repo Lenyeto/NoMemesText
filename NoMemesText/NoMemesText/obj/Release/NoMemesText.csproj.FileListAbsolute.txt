@@ -7,3 +7,4 @@ C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.Properties.Resour
 C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.csproj.GenerateResource.Cache
 C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.exe
 C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.pdb
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.csprojResolveAssemblyReference.cache
