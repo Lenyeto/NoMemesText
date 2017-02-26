@@ -72,6 +72,7 @@ namespace NoMemesText
 
                 if (tmpS.Length < 7)
                 {
+                    Console.WriteLine("{0}", tmpS.Length);
                     continue;
                 }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NoMemesText
+namespace NoMemesTextItemCreator
 {
     public enum ItemType { Weapon, Armor, Consumable, Trinket }
     public enum ItemSlot { Head, Torso, Legs, Feet, MainHand, OffHand }
@@ -22,6 +22,23 @@ namespace NoMemesText
 
         public bool isQuestItem;
 
+        public Item()
+        {
+
+        }
+
+        public Item(Item i)
+        {
+            mName = i.mName;
+            mDescription = i.mDescription;
+            mType = i.mType;
+            mSlot = i.mSlot;
+            mDMG = i.mDMG;
+            mArmor = i.mArmor;
+            mValue = i.mValue;
+            isQuestItem = i.isQuestItem;
+        }
+
         public Item(string name, string description, ItemType type, ItemSlot slot, int damage, int armor, int value, bool quest)
         {
             mName = name;
@@ -31,9 +48,16 @@ namespace NoMemesText
             mDMG = damage;
             mValue = value;
             isQuestItem = quest;
+        }
 
-            Console.WriteLine("Created item with following information.");
-            Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}, {6}", name, description, type, slot, damage, value, quest);
+        public override string ToString()
+        {
+            return mName;
+        }
+
+        public string getFullInfo()
+        {
+            return mName + '\n' + mDescription + '\n' + mType + '\n' + mSlot + '\n' + mDMG + '\n' + mArmor + '\n' + mValue + '\n' + isQuestItem;
         }
     }
 }

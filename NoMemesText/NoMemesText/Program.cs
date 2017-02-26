@@ -26,10 +26,15 @@ namespace NoMemesText
 
         static string loginPassword;
 
+        public static ItemDictionary mItemDictionary;
+
         static void Main(string[] args)
         {
             mapLock = new Mutex();
             mailLock = new Mutex();
+
+            mItemDictionary = new ItemDictionary();
+            mItemDictionary.loadItemsFromFile("../media/items.csv");
 
             if (args.Length == 0)
             {
