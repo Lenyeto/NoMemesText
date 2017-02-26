@@ -1,0 +1,9 @@
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Release\NoMemesText.exe.config
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Release\NoMemesText.exe
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Release\NoMemesText.pdb
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Release\Mail.dll
+C:\NoMemesText\NoMemesText\NoMemesText\bin\Release\Mail.xml
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.Properties.Resources.resources
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.csproj.GenerateResource.Cache
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.exe
+C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.pdb
