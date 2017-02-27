@@ -72,7 +72,6 @@ namespace NoMemesText
 
                 if (tmpS.Length < 7)
                 {
-                    Console.WriteLine("{0}", tmpS.Length);
                     continue;
                 }
 
@@ -82,17 +81,13 @@ namespace NoMemesText
                 int tmpArmor;
                 int tmpValue;
                 bool tmpQuest = false;
-
-                tmpType = (ItemType) int.Parse(tmpS[2]);
-                tmpSlot = (ItemSlot) int.Parse(tmpS[3]);
+                
+                tmpType = (ItemType) Enum.Parse(typeof(ItemType), tmpS[2]);
+                tmpSlot = (ItemSlot)Enum.Parse(typeof(ItemSlot), tmpS[3]);
                 tmpDamage = int.Parse(tmpS[4]);
                 tmpArmor = int.Parse(tmpS[5]);
                 tmpValue = int.Parse(tmpS[6]);
-
-                if (tmpS[7].ToLower().Equals("true"))
-                {
-                    tmpQuest = true;
-                }
+                tmpQuest = bool.Parse(tmpS[7]);
 
                 tmp = new Item(tmpS[0], tmpS[1], tmpType, tmpSlot, tmpDamage, tmpArmor, tmpValue, tmpQuest);
 

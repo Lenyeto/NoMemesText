@@ -1,2 +1,7 @@
-Short Sword,A small and weak sword.,0,0,2,0,10,FALSE
-Long Sword,A larger sword that has some more power,0,0,4,0,20,FALSE
+Short Wooden Sword,A short wooden sword.,Weapon,MainHand,1,0,0,False
+Short Copper Sword,A short copper sword.,Weapon,MainHand,2,0,0,False
+Long Wooden Sword,A long wooden sword.,Weapon,MainHand,2,0,0,False
+Long Copper Sword,A long copper sword,Weapon,MainHand,4,0,0,False
+Wooden Mace,A blunt mace made out of wood.,Weapon,MainHand,2,0,0,False
+Copper Helmet,A flexible helmet made out of copper.,Armor,Head,0,1,0,False
+Copper Chest,A flexible chest piece made of copper.,Armor,Torso,0,2,0,False
