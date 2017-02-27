@@ -41,14 +41,8 @@ namespace NoMemesText
                 MailBuilder builder = new MailBuilder();
                 foreach (var uid in pop3.GetAll())
                 {
-                    //Console.Write(uid);
                     IMail email = builder.CreateFromEml(pop3.GetMessageByUID(uid));
-
-                    //Console.WriteLine(email.Subject);
-                    //Console.WriteLine(email.Text);
-                    //Console.Write(email.Sender.Address);
-                    ///Console.Write(" : ");
-                    ///Console.WriteLine(email.GetBodyAsText());
+                    
 
 
                     User tmp = UserHandler.getInstance().getUser(email.Sender.Address);
@@ -56,58 +50,45 @@ namespace NoMemesText
 
                     string command = email.GetBodyAsText().ToLower();
                     
-                    
-
-                    if (command.Contains("clear"))
+                    if (tmp.isNew)
                     {
-                        tmp = new User();
-
-                        tmp.setHasMessage(true);
-                        //tmp.message = choiceProcessor.getText(tmp.choices.ToArray());
-                        tmp.message = choiceProcessor.getText();
-
-                    }
-                    else if (command.Contains("help"))
-                    {
-                        tmp.setHasMessage(true);
-
-                        tmp.message = "map\nclear";
-                    }
-                    else if (command.Contains("map"))
-                    {
-                        Map.getInstance().createImage();
-                        Program.sendMessageWithAttachment("", email.Sender.Address, "tmpMap.png");
-                        Program.sendMessageWithAttachment("", email.Sender.Address, "tmpMap.jpeg");
-                        continue;
-                    }
-                    else if (command.Contains("a"))
-                    {
-
-                        tmp.setHasMessage(true);
-                        tmp.makeChoice(false);
-
-                        tmp.message = choiceProcessor.getText(tmp.choices.ToArray());
-                    }
-                    else if (command.Contains("b"))
-                    {
-                        tmp.setHasMessage(true);
-                        tmp.makeChoice(true);
-
-                        tmp.message = choiceProcessor.getText(tmp.choices.ToArray());
-
+                        tmp.message = choiceProcessor.getWelcomMessage();
+                        tmp.isNew = false;
                     }
                     else
                     {
-                        tmp.setHasMessage(true);
-
-                        tmp.message = choiceProcessor.getText();
-                    }
-
-                    if (tmp.choices != null)
-                    {
-                        foreach (bool b in tmp.choices.ToArray())
+                        if (command.ToLower().Contains("clear"))
                         {
-                            Console.WriteLine(b);
+                            tmp = new User();
+
+                            tmp.setHasMessage(true);
+                            //tmp.message = choiceProcessor.getText();
+                            tmp.message = choiceProcessor.getWelcomMessage();
+
+                        }
+                        else if (command.ToLower().Contains("help"))
+                        {
+                            tmp.setHasMessage(true);
+
+                            tmp.message = "map\nclear";
+                        }
+                        else if (command.ToLower().Contains("map"))
+                        {
+                        
+                            Map.getInstance().createImage();
+                            Program.sendMessageWithAttachment("", email.Sender.Address, "tmpMap.png");
+                            Program.sendMessageWithAttachment("", email.Sender.Address, "tmpMap.jpeg");
+                            continue;
+                        }
+                        else if (command.ToLower().Contains("look"))
+                        {
+                            tmp.message = choiceProcessor.getTextLocation(tmp);
+                        }
+                        else
+                        {
+                            tmp.setHasMessage(true);
+
+                            //tmp.message = choiceProcessor.getText();
                         }
                     }
 

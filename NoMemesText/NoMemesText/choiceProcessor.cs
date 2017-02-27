@@ -17,53 +17,6 @@ namespace NoMemesText
     {
         
 
-        public static string getText(params bool[] arguments)
-        {
-            Console.WriteLine(arguments.Length);
-
-            if (arguments.Length == 0)
-            {
-                return "Choices will be in text as (X), where you reply with your choice as that character. | You find yourself in a forest. You can travel North (A) or South (B).";
-            }
-            else if (arguments.Length == 1)
-            {
-                if (!arguments[0])
-                {
-                    return "You find a small pond. You can fish (A) or forage from plants (B).";
-                }
-                else if (arguments[0])
-                {
-                    return "You find a cave. You can search it (A) or gather wood (B)";
-                }
-            }
-            else if (arguments.Length == 2)
-            {
-                if (!arguments[0] && !arguments[1])
-                {
-                    return "END1 | Reply Clear to clear your progress.";
-                }
-                else if (!arguments[0] && arguments[1])
-                {
-                    return "END2 | Reply Clear to clear your progress.";
-                }
-                else if (arguments[0] && !arguments[1])
-                {
-                    return "END3 | Reply Clear to clear your progress.";
-                }
-                else if (arguments[0] && arguments[1])
-                {
-                    return "END4 | Reply Clear to clear your progress.";
-                }
-            }
-
-
-
-
-
-
-            return "";
-        }
-
         public static string getTextLocation(User u)
         {
             if (Map.getInstance().getCell(u.pos.x, u.pos.y).m_type == Cell.Type.Blank)
@@ -135,6 +88,11 @@ namespace NoMemesText
 
 
             return cr;
+        }
+
+        public static string getWelcomMessage()
+        {
+            return "Welcome to NoMemesText, an experiemental text based adventure game. Please type 'help' in order to receive a list of commands you can use!";
         }
     }
 }

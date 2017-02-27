@@ -83,7 +83,7 @@ namespace NoMemesText
                 bool tmpQuest = false;
                 
                 tmpType = (ItemType) Enum.Parse(typeof(ItemType), tmpS[2]);
-                tmpSlot = (ItemSlot)Enum.Parse(typeof(ItemSlot), tmpS[3]);
+                tmpSlot = (ItemSlot) Enum.Parse(typeof(ItemSlot), tmpS[3]);
                 tmpDamage = int.Parse(tmpS[4]);
                 tmpArmor = int.Parse(tmpS[5]);
                 tmpValue = int.Parse(tmpS[6]);

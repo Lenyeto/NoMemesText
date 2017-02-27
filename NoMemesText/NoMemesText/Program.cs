@@ -11,7 +11,6 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 
 
-
 namespace NoMemesText
 {
     class Program
@@ -22,10 +21,13 @@ namespace NoMemesText
         // A lock for changing when the mail should be changed.
         public static Mutex mailLock;
 
+        // Whether or not the program should continue to run.
         public static bool isRunning = true;
 
+        // The password (passed through by arguments when launching the program) for the email.
         static string loginPassword;
 
+        // A list of all the items in the game.
         public static ItemDictionary mItemDictionary;
 
         static void Main(string[] args)
@@ -38,6 +40,7 @@ namespace NoMemesText
 
             if (args.Length == 0)
             {
+                Console.WriteLine("First argument needs to be a password for the email");
                 return;
             }
             loginPassword = args[0];
@@ -50,6 +53,8 @@ namespace NoMemesText
 
             Thread t2 = new Thread(new ThreadStart(UserHandler.getInstance().updateUsers));
             t2.Start();
+            
+            
 
             while (isRunning)
             {
@@ -62,26 +67,24 @@ namespace NoMemesText
                     // Tells this loop that it will end at the end of the loop.
                     isRunning = false;
 
-                    // Sets the email checker to stop looping.
-                    ec.shouldRun = false;
-
-                    // Sets the user updater to stop looping.
-                    UserHandler.getInstance().shouldRun = false;
-
-                    // Sets the email checking thread to join this thread.
-                    t.Join();
-
-                    // Sets the user checking thread to join this thread.
-                    t2.Join();
+                    
 
                 }
-
-                Console.Out.WriteLine(s);
-
                 
-
+                    
             }
 
+            // Sets the email checker to stop looping.
+            ec.shouldRun = false;
+
+            // Sets the user updater to stop looping.
+            UserHandler.getInstance().shouldRun = false;
+
+            // Sets the email checking thread to join this thread.
+            t.Join();
+
+            // Sets the user checking thread to join this thread.
+            t2.Join();
 
 
 

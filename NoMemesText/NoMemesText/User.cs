@@ -14,7 +14,7 @@ namespace NoMemesText
 
 
 
-    public struct User
+    public class User
     {
         //Whether or not the player has a pending message.
         public bool hasMessage;
@@ -34,31 +34,22 @@ namespace NoMemesText
         //The items the user is currently holding.
         public int[] items;
 
+        //The current quest the user is on.
+        public int quest;
+
         //The spots on the map that have been visited.
         public Coords[] visited;
-
-        //Going to be deprecated, was just used for a choose your own adventure type of structure.
-        public bool[] choices;
 
         //Sets whether the player has a message or not.
         public void setHasMessage(bool b) { hasMessage = b; }
 
-        //Going to be deprecated, was just used for a choose your own adventure type of structure.
-        public void makeChoice(bool b)
+        //Whether or not the player was just created.
+        public bool isNew;
+
+        public User()
         {
-            if (choices == null)
-            {
-                choices = new bool[1];
-                choices[0] = b;
-            }
-            else
-            {
-                bool[] tmp = new bool[choices.Length];
-                choices.CopyTo(tmp, 0);
-                choices = new bool[tmp.Length + 1];
-                tmp.CopyTo(choices, 0);
-                choices[choices.Length - 1] = b;
-            }
+            isNew = true;
         }
+        
     }
 }
