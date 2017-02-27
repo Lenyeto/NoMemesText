@@ -62,16 +62,16 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.damageSelect = new System.Windows.Forms.NumericUpDown();
             this.armorSelect = new System.Windows.Forms.NumericUpDown();
             this.SetSelected = new System.Windows.Forms.Button();
+            this.itemDescriptionFromList = new System.Windows.Forms.RichTextBox();
+            this.nameFromSelected = new System.Windows.Forms.TextBox();
+            this.typeFromSelected = new System.Windows.Forms.TextBox();
+            this.slotFromSelected = new System.Windows.Forms.TextBox();
+            this.damageFromSelected = new System.Windows.Forms.TextBox();
+            this.armorFromSelected = new System.Windows.Forms.TextBox();
+            this.isQuestItemFromSelected = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.damageSelect)).BeginInit();
@@ -89,7 +89,7 @@
             this.itemTypeDropDown.Location = new System.Drawing.Point(23, 195);
             this.itemTypeDropDown.Name = "itemTypeDropDown";
             this.itemTypeDropDown.Size = new System.Drawing.Size(121, 21);
-            this.itemTypeDropDown.TabIndex = 0;
+            this.itemTypeDropDown.TabIndex = 2;
             this.itemTypeDropDown.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // nameTextBox
@@ -97,7 +97,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(24, 41);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(121, 20);
-            this.nameTextBox.TabIndex = 1;
+            this.nameTextBox.TabIndex = 0;
             this.nameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // descriptionTextBox
@@ -105,7 +105,7 @@
             this.descriptionTextBox.Location = new System.Drawing.Point(23, 80);
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(121, 96);
-            this.descriptionTextBox.TabIndex = 3;
+            this.descriptionTextBox.TabIndex = 1;
             this.descriptionTextBox.Text = "";
             this.descriptionTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
@@ -159,16 +159,17 @@
             this.itemSlotDropDown.Location = new System.Drawing.Point(23, 236);
             this.itemSlotDropDown.Name = "itemSlotDropDown";
             this.itemSlotDropDown.Size = new System.Drawing.Size(121, 21);
-            this.itemSlotDropDown.TabIndex = 8;
+            this.itemSlotDropDown.TabIndex = 3;
             this.itemSlotDropDown.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // listBox1
             // 
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(504, 27);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 550);
-            this.listBox1.TabIndex = 9;
+            this.listBox1.Size = new System.Drawing.Size(120, 548);
+            this.listBox1.TabIndex = 8;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button1
@@ -176,7 +177,7 @@
             this.button1.Location = new System.Drawing.Point(12, 554);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -186,7 +187,7 @@
             this.button2.Location = new System.Drawing.Point(423, 27);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
+            this.button2.TabIndex = 9;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -196,7 +197,7 @@
             this.button3.Location = new System.Drawing.Point(423, 554);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 12;
+            this.button3.TabIndex = 11;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -225,7 +226,7 @@
             this.questBox.Location = new System.Drawing.Point(24, 341);
             this.questBox.Name = "questBox";
             this.questBox.Size = new System.Drawing.Size(97, 17);
-            this.questBox.TabIndex = 16;
+            this.questBox.TabIndex = 6;
             this.questBox.Text = "Is a Quest Item";
             this.questBox.UseVisualStyleBackColor = true;
             this.questBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -278,14 +279,14 @@
             // openToolStripMenuItem2
             // 
             this.openToolStripMenuItem2.Name = "openToolStripMenuItem2";
-            this.openToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem2.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem2.Text = "Open";
             this.openToolStripMenuItem2.Click += new System.EventHandler(this.openToolStripMenuItem2_Click);
             // 
             // saveToolStripMenuItem1
             // 
             this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(103, 22);
             this.saveToolStripMenuItem1.Text = "Save";
             // 
             // label7
@@ -300,34 +301,37 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(330, 83);
+            this.label8.Location = new System.Drawing.Point(247, 102);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 22;
             this.label8.Text = "Name";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(330, 107);
+            this.label9.Location = new System.Drawing.Point(247, 123);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 13);
             this.label9.TabIndex = 23;
             this.label9.Text = "Description";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(330, 166);
+            this.label10.Location = new System.Drawing.Point(247, 182);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 13);
             this.label10.TabIndex = 24;
             this.label10.Text = "Item Type";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(330, 179);
+            this.label11.Location = new System.Drawing.Point(247, 206);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 13);
             this.label11.TabIndex = 25;
@@ -337,92 +341,39 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(330, 190);
+            this.label12.Location = new System.Drawing.Point(247, 232);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(47, 13);
             this.label12.TabIndex = 26;
             this.label12.Text = "Damage";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(330, 203);
+            this.label13.Location = new System.Drawing.Point(247, 257);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 13);
             this.label13.TabIndex = 27;
             this.label13.Text = "Armor";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(330, 216);
+            this.label14.Location = new System.Drawing.Point(247, 283);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(58, 13);
             this.label14.TabIndex = 28;
             this.label14.Text = "Quest Item";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(397, 216);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 13);
-            this.label15.TabIndex = 33;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(397, 203);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(0, 13);
-            this.label16.TabIndex = 32;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(397, 190);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(0, 13);
-            this.label17.TabIndex = 31;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(397, 179);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(0, 13);
-            this.label18.TabIndex = 30;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(397, 163);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(0, 13);
-            this.label19.TabIndex = 29;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(396, 107);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(0, 13);
-            this.label20.TabIndex = 35;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(396, 83);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(0, 13);
-            this.label21.TabIndex = 34;
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // damageSelect
             // 
             this.damageSelect.Location = new System.Drawing.Point(23, 276);
             this.damageSelect.Name = "damageSelect";
             this.damageSelect.Size = new System.Drawing.Size(120, 20);
-            this.damageSelect.TabIndex = 36;
+            this.damageSelect.TabIndex = 4;
             this.damageSelect.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // armorSelect
@@ -430,7 +381,7 @@
             this.armorSelect.Location = new System.Drawing.Point(23, 315);
             this.armorSelect.Name = "armorSelect";
             this.armorSelect.Size = new System.Drawing.Size(120, 20);
-            this.armorSelect.TabIndex = 37;
+            this.armorSelect.TabIndex = 5;
             this.armorSelect.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // SetSelected
@@ -438,26 +389,92 @@
             this.SetSelected.Location = new System.Drawing.Point(423, 408);
             this.SetSelected.Name = "SetSelected";
             this.SetSelected.Size = new System.Drawing.Size(75, 23);
-            this.SetSelected.TabIndex = 38;
+            this.SetSelected.TabIndex = 10;
             this.SetSelected.Text = "Set Values From Selected";
             this.SetSelected.UseVisualStyleBackColor = true;
             this.SetSelected.Click += new System.EventHandler(this.SetSelected_Click);
+            // 
+            // itemDescriptionFromList
+            // 
+            this.itemDescriptionFromList.BackColor = System.Drawing.SystemColors.Control;
+            this.itemDescriptionFromList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.itemDescriptionFromList.Location = new System.Drawing.Point(311, 120);
+            this.itemDescriptionFromList.Name = "itemDescriptionFromList";
+            this.itemDescriptionFromList.ReadOnly = true;
+            this.itemDescriptionFromList.Size = new System.Drawing.Size(187, 59);
+            this.itemDescriptionFromList.TabIndex = 36;
+            this.itemDescriptionFromList.Text = "";
+            // 
+            // nameFromSelected
+            // 
+            this.nameFromSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameFromSelected.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nameFromSelected.Location = new System.Drawing.Point(311, 99);
+            this.nameFromSelected.Name = "nameFromSelected";
+            this.nameFromSelected.ReadOnly = true;
+            this.nameFromSelected.Size = new System.Drawing.Size(187, 20);
+            this.nameFromSelected.TabIndex = 37;
+            // 
+            // typeFromSelected
+            // 
+            this.typeFromSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.typeFromSelected.Location = new System.Drawing.Point(311, 182);
+            this.typeFromSelected.Name = "typeFromSelected";
+            this.typeFromSelected.ReadOnly = true;
+            this.typeFromSelected.Size = new System.Drawing.Size(187, 20);
+            this.typeFromSelected.TabIndex = 38;
+            // 
+            // slotFromSelected
+            // 
+            this.slotFromSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.slotFromSelected.Location = new System.Drawing.Point(311, 206);
+            this.slotFromSelected.Name = "slotFromSelected";
+            this.slotFromSelected.ReadOnly = true;
+            this.slotFromSelected.Size = new System.Drawing.Size(187, 20);
+            this.slotFromSelected.TabIndex = 39;
+            // 
+            // damageFromSelected
+            // 
+            this.damageFromSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.damageFromSelected.Location = new System.Drawing.Point(311, 232);
+            this.damageFromSelected.Name = "damageFromSelected";
+            this.damageFromSelected.ReadOnly = true;
+            this.damageFromSelected.Size = new System.Drawing.Size(187, 20);
+            this.damageFromSelected.TabIndex = 40;
+            // 
+            // armorFromSelected
+            // 
+            this.armorFromSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.armorFromSelected.Location = new System.Drawing.Point(311, 257);
+            this.armorFromSelected.Name = "armorFromSelected";
+            this.armorFromSelected.ReadOnly = true;
+            this.armorFromSelected.Size = new System.Drawing.Size(187, 20);
+            this.armorFromSelected.TabIndex = 41;
+            // 
+            // isQuestItemFromSelected
+            // 
+            this.isQuestItemFromSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.isQuestItemFromSelected.Location = new System.Drawing.Point(311, 283);
+            this.isQuestItemFromSelected.Name = "isQuestItemFromSelected";
+            this.isQuestItemFromSelected.ReadOnly = true;
+            this.isQuestItemFromSelected.Size = new System.Drawing.Size(187, 20);
+            this.isQuestItemFromSelected.TabIndex = 42;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 589);
+            this.Controls.Add(this.isQuestItemFromSelected);
+            this.Controls.Add(this.armorFromSelected);
+            this.Controls.Add(this.damageFromSelected);
+            this.Controls.Add(this.slotFromSelected);
+            this.Controls.Add(this.typeFromSelected);
+            this.Controls.Add(this.nameFromSelected);
+            this.Controls.Add(this.itemDescriptionFromList);
             this.Controls.Add(this.SetSelected);
             this.Controls.Add(this.armorSelect);
             this.Controls.Add(this.damageSelect);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -484,7 +501,8 @@
             this.Controls.Add(this.itemTypeDropDown);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "NoMemesText Item Creator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -530,16 +548,16 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.NumericUpDown damageSelect;
         private System.Windows.Forms.NumericUpDown armorSelect;
         private System.Windows.Forms.Button SetSelected;
+        private System.Windows.Forms.RichTextBox itemDescriptionFromList;
+        private System.Windows.Forms.TextBox nameFromSelected;
+        private System.Windows.Forms.TextBox typeFromSelected;
+        private System.Windows.Forms.TextBox slotFromSelected;
+        private System.Windows.Forms.TextBox damageFromSelected;
+        private System.Windows.Forms.TextBox armorFromSelected;
+        private System.Windows.Forms.TextBox isQuestItemFromSelected;
     }
 }
 

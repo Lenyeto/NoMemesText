@@ -59,13 +59,13 @@ namespace NoMemesTextItemCreator
 
             if (listBox1.SelectedItem != null)
             {
-                label21.Text = ((Item)listBox1.SelectedItem).mName;
-                label20.Text = ((Item)listBox1.SelectedItem).mDescription;
-                label19.Text = ((Item)listBox1.SelectedItem).mType.ToString();
-                label18.Text = ((Item)listBox1.SelectedItem).mSlot.ToString();
-                label17.Text = ((Item)listBox1.SelectedItem).mDMG.ToString();
-                label16.Text = ((Item)listBox1.SelectedItem).mArmor.ToString();
-                label15.Text = ((Item)listBox1.SelectedItem).isQuestItem.ToString();
+                nameFromSelected.Text = ((Item)listBox1.SelectedItem).mName;
+                itemDescriptionFromList.Text = ((Item)listBox1.SelectedItem).mDescription;
+                typeFromSelected.Text = ((Item)listBox1.SelectedItem).mType.ToString();
+                slotFromSelected.Text = ((Item)listBox1.SelectedItem).mSlot.ToString();
+                damageFromSelected.Text = ((Item)listBox1.SelectedItem).mDMG.ToString();
+                armorFromSelected.Text = ((Item)listBox1.SelectedItem).mArmor.ToString();
+                isQuestItemFromSelected.Text = ((Item)listBox1.SelectedItem).isQuestItem.ToString();
             }
         }
 
@@ -153,10 +153,8 @@ namespace NoMemesTextItemCreator
 
         private void SetSelected_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("TEST");
             if (listBox1.SelectedItem != null)
             {
-                Console.WriteLine("TEST");
                 nameTextBox.Text = ((Item)listBox1.SelectedItem).mName;
                 descriptionTextBox.Text = ((Item)listBox1.SelectedItem).mDescription;
                 itemTypeDropDown.SelectedIndex = (int)((Item)listBox1.SelectedItem).mType;
@@ -166,6 +164,76 @@ namespace NoMemesTextItemCreator
                 questBox.Checked = ((Item)listBox1.SelectedItem).isQuestItem;
             }
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
