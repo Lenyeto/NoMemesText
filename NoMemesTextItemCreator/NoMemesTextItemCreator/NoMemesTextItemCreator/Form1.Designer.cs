@@ -499,8 +499,11 @@
             this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.itemTypeDropDown);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "NoMemesText Item Creator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);
