@@ -10,6 +10,11 @@ namespace NoMemesText
     {
         public int x;
         public int y;
+
+        public override string ToString()
+        {
+            return x.ToString() + "," + y.ToString();
+        }
     }
 
 
@@ -32,13 +37,13 @@ namespace NoMemesText
         public int level;
 
         //The items the user is currently holding.
-        public int[] items;
+        public List<int> items;
 
         //The current quest the user is on.
         public int quest;
 
         //The spots on the map that have been visited.
-        public Coords[] visited;
+        public List<Coords> visited;
 
         //Sets whether the player has a message or not.
         public void setHasMessage(bool b) { hasMessage = b; }
@@ -49,7 +54,45 @@ namespace NoMemesText
         public User()
         {
             isNew = true;
+            items = new List<int>();
+            visited = new List<Coords>();
         }
-        
+
+        public override string ToString()
+        {
+            string tmp;
+
+            tmp = hasMessage.ToString();
+            tmp += '\t';
+            tmp += message;
+            tmp += '\t';
+            tmp += pos.ToString();
+            tmp += '\t';
+            tmp += xp.ToString();
+            tmp += '\t';
+            tmp += level.ToString();
+            tmp += '\t';
+            tmp += "{";
+            foreach (int i in items)
+            {
+                tmp += i.ToString();
+                tmp += ",";
+            }
+            tmp += "}";
+            tmp += '\t';
+            tmp += quest.ToString();
+            tmp += '\t';
+            tmp += "{";
+            foreach (Coords c in visited)
+            {
+                tmp += c.ToString();
+                tmp += ".";
+            }
+            tmp += "}";
+
+
+            return tmp;
+        }
+
     }
 }

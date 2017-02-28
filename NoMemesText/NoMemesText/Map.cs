@@ -79,7 +79,7 @@ namespace NoMemesText
                             int pixelY = y * 32;
                             if (x == 0 || y == 0 || x == map_size_x - 1 || y == map_size_y - 1)
                             {
-                                g.DrawImage(Image.FromFile("TileSet/Grass.png"), new Point(pixelX, pixelY));
+                                g.DrawImage(Image.FromFile("../media/TileSet/Grass.png"), new Point(pixelX, pixelY));
                             } else
                             {
                                 if (m_cells[x][y].m_type == Cell.Type.Road)
@@ -92,34 +92,34 @@ namespace NoMemesText
                                             {
                                                 if (m_cells[x][y + 1].m_type == Cell.Type.Road)
                                                 {
-                                                    g.DrawImage(Image.FromFile("TileSet/Paths/All.png"), new Point(pixelX, pixelY));
+                                                    g.DrawImage(Image.FromFile("../media/TileSet/Paths/All.png"), new Point(pixelX, pixelY));
                                                 } else
                                                 {
-                                                    g.DrawImage(Image.FromFile("TileSet/Paths/UpLeftRight.png"), new Point(pixelX, pixelY));
+                                                    g.DrawImage(Image.FromFile("../media/TileSet/Paths/UpLeftRight.png"), new Point(pixelX, pixelY));
                                                 }
                                             } else if (m_cells[x][y + 1].m_type == Cell.Type.Road)
                                             {
-                                                g.DrawImage(Image.FromFile("TileSet/Paths/LeftDownRight.png"), new Point(pixelX, pixelY));
+                                                g.DrawImage(Image.FromFile("../media/TileSet/Paths/LeftDownRight.png"), new Point(pixelX, pixelY));
                                             } else 
                                             {
-                                                g.DrawImage(Image.FromFile("TileSet/Paths/LeftRight.png"), new Point(pixelX, pixelY));
+                                                g.DrawImage(Image.FromFile("../media/TileSet/Paths/LeftRight.png"), new Point(pixelX, pixelY));
                                             }
                                         } else if (m_cells[x][y + 1].m_type == Cell.Type.Road)
                                         {
                                             if (m_cells[x][y - 1].m_type == Cell.Type.Road)
                                             {
-                                                g.DrawImage(Image.FromFile("TileSet/Paths/UpLeftDown.png"), new Point(pixelX, pixelY));
+                                                g.DrawImage(Image.FromFile("../media/TileSet/Paths/UpLeftDown.png"), new Point(pixelX, pixelY));
                                             } else
                                             {
-                                                g.DrawImage(Image.FromFile("TileSet/Paths/LeftDown.png"), new Point(pixelX, pixelY));
+                                                g.DrawImage(Image.FromFile("../media/TileSet/Paths/LeftDown.png"), new Point(pixelX, pixelY));
                                             }
                                             
                                         } else if (m_cells[x][y - 1].m_type == Cell.Type.Road)
                                         {
-                                            g.DrawImage(Image.FromFile("TileSet/Paths/UpLeft.png"), new Point(pixelX, pixelY));
+                                            g.DrawImage(Image.FromFile("../media/TileSet/Paths/UpLeft.png"), new Point(pixelX, pixelY));
                                         } else 
                                         {
-                                            g.DrawImage(Image.FromFile("TileSet/Paths/RightDead.png"), new Point(pixelX, pixelY));
+                                            g.DrawImage(Image.FromFile("../media/TileSet/Paths/RightDead.png"), new Point(pixelX, pixelY));
                                         }
                                     } else if (m_cells[x][y - 1].m_type == Cell.Type.Road)
                                     {
@@ -128,40 +128,40 @@ namespace NoMemesText
 
                                             if (m_cells[x + 1][y].m_type == Cell.Type.Road)
                                             {
-                                                g.DrawImage(Image.FromFile("TileSet/Paths/UpRightDown.png"), new Point(pixelX, pixelY));
+                                                g.DrawImage(Image.FromFile("../media/TileSet/Paths/UpRightDown.png"), new Point(pixelX, pixelY));
                                             }
                                             else
                                             {
-                                                g.DrawImage(Image.FromFile("TileSet/Paths/UpDown.png"), new Point(pixelX, pixelY));
+                                                g.DrawImage(Image.FromFile("../media/TileSet/Paths/UpDown.png"), new Point(pixelX, pixelY));
                                             }
                                         } else if (m_cells[x + 1][y].m_type == Cell.Type.Road)
                                         {
-                                            g.DrawImage(Image.FromFile("TileSet/Paths/UpRight.png"), new Point(pixelX, pixelY));
+                                            g.DrawImage(Image.FromFile("../media/TileSet/Paths/UpRight.png"), new Point(pixelX, pixelY));
                                         }
                                         else
                                         {
-                                            g.DrawImage(Image.FromFile("TileSet/Paths/DownDead.png"), new Point(pixelX, pixelY));
+                                            g.DrawImage(Image.FromFile("../media/TileSet/Paths/DownDead.png"), new Point(pixelX, pixelY));
                                         }
                                     } else if (m_cells[x][y + 1].m_type == Cell.Type.Road)
                                     {
                                         if (m_cells[x + 1][y].m_type == Cell.Type.Road)
                                         {
-                                            g.DrawImage(Image.FromFile("TileSet/Paths/DownRight.png"), new Point(pixelX, pixelY));
+                                            g.DrawImage(Image.FromFile("../media/TileSet/Paths/DownRight.png"), new Point(pixelX, pixelY));
                                         } else
                                         {
-                                            g.DrawImage(Image.FromFile("TileSet/Paths/UpDead.png"), new Point(pixelX, pixelY));
+                                            g.DrawImage(Image.FromFile("../media/TileSet/Paths/UpDead.png"), new Point(pixelX, pixelY));
                                         }
                                     } else if (m_cells[x + 1][y].m_type == Cell.Type.Road)
                                     {
-                                        g.DrawImage(Image.FromFile("TileSet/Paths/LeftDead.png"), new Point(pixelX, pixelY));
+                                        g.DrawImage(Image.FromFile("../media/TileSet/Paths/LeftDead.png"), new Point(pixelX, pixelY));
                                     } else
                                     {
-                                        g.DrawImage(Image.FromFile("TileSet/Paths/DeadAll.png"), new Point(pixelX, pixelY));
+                                        g.DrawImage(Image.FromFile("../media/TileSet/Paths/DeadAll.png"), new Point(pixelX, pixelY));
                                     }
 
                                 } else
                                 {
-                                    g.DrawImage(Image.FromFile("TileSet/Grass.png"), new Point(pixelX, pixelY));
+                                    g.DrawImage(Image.FromFile("../media/TileSet/Grass.png"), new Point(pixelX, pixelY));
                                 }
                             }
                             //g.DrawImage(Image.FromFile())
@@ -175,8 +175,8 @@ namespace NoMemesText
                 //b.Save(@"C:\green.png", ImageFormat.Png);
                 try
                 {
-                    b.Save("tmpMap.png", ImageFormat.Png);
-                    b.Save("tmpMap.jpeg", ImageFormat.Jpeg);
+                    b.Save("../media/tmpMap.png", ImageFormat.Png);
+                    b.Save("../media/tmpMap.jpeg", ImageFormat.Jpeg);
                     
                 }
                 catch (Exception e)

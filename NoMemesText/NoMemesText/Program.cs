@@ -70,6 +70,11 @@ namespace NoMemesText
                     
 
                 }
+
+                if (s.Equals("save"))
+                {
+                    SaveSystem.saveData();
+                }
                 
                     
             }

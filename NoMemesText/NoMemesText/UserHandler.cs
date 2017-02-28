@@ -13,6 +13,11 @@ namespace NoMemesText
 
         public bool shouldRun = true;
 
+        public Dictionary<string, User> getUsers()
+        {
+            return users;
+        }
+
         string password;
 
         private UserHandler()

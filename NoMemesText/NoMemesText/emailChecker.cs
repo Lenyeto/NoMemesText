@@ -53,6 +53,7 @@ namespace NoMemesText
                     if (tmp.isNew)
                     {
                         tmp.message = choiceProcessor.getWelcomMessage();
+                        tmp.setHasMessage(true);
                         tmp.isNew = false;
                     }
                     else
@@ -76,8 +77,8 @@ namespace NoMemesText
                         {
                         
                             Map.getInstance().createImage();
-                            Program.sendMessageWithAttachment("", email.Sender.Address, "tmpMap.png");
-                            Program.sendMessageWithAttachment("", email.Sender.Address, "tmpMap.jpeg");
+                            Program.sendMessageWithAttachment("", email.Sender.Address, "../media/tmpMap.png");
+                            //Program.sendMessageWithAttachment("", email.Sender.Address, "../media/tmpMap.jpeg");
                             continue;
                         }
                         else if (command.ToLower().Contains("look"))
