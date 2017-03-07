@@ -12,6 +12,8 @@ namespace NoMemesText
 
     public class Quest
     {
+        int prereqQuest;
+
         string mName;
         string mDescription;
 
@@ -28,13 +30,14 @@ namespace NoMemesText
 
         Coords placeToKill;
 
-        public Quest(string name, string description, int XPReward = 0, int goldReward = 0, int itemIDReward = 0)
+        public Quest(string name, string description, int XPReward = 0, int goldReward = 0, int itemIDReward = -1, int prereq = -1)
         {
             mName = name;
             mDescription = description;
             mXPReward = XPReward;
             mGoldReward = goldReward;
             mItemIDReward = itemIDReward;
+            prereqQuest = prereq;
         }
     }
 }
