@@ -1,0 +1,9 @@
+c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\bin\Debug\NoMemesTextQuestCreator.exe.config
+c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\bin\Debug\NoMemesTextQuestCreator.exe
+c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\bin\Debug\NoMemesTextQuestCreator.pdb
+c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.csprojResolveAssemblyReference.cache
+c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.Form1.resources
+c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.Properties.Resources.resources
+c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.csproj.GenerateResource.Cache
+c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.exe
+c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.pdb

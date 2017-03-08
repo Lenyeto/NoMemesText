@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NoMemesText
+namespace NoMemesTextQuestCreator
 {
     enum questCondition { Deliver, Kill, Gather, Goto };
 
@@ -12,32 +12,31 @@ namespace NoMemesText
 
     public class Quest
     {
-        int prereqQuest;
+        public string mName;
+        public string mDescription;
 
-        string mName;
-        string mDescription;
+        public int mXPReward;
+        public int mGoldReward;
 
-        int mXPReward;
-        int mGoldReward;
+        public int mItemIDReward;
 
-        int mItemIDReward;
+        public int mAmountToKill;
 
         questCondition mCond;
 
         creatureType mCreatureToKill;
 
-        int mAmountToKill;
+        
 
-        Coords placeToKill;
+        //Coords placeToKill;
 
-        public Quest(string name, string description, int XPReward = 0, int goldReward = 0, int itemIDReward = -1, int prereq = -1)
+        public Quest(string name, string description, int XPReward = 0, int goldReward = 0, int itemIDReward = 0)
         {
             mName = name;
             mDescription = description;
             mXPReward = XPReward;
             mGoldReward = goldReward;
             mItemIDReward = itemIDReward;
-            prereqQuest = prereq;
         }
     }
 }
