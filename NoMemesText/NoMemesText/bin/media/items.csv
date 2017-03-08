@@ -1,7 +1,7 @@
-Short Wooden Sword,A short wooden sword.,Weapon,MainHand,1,0,0,False
-Short Copper Sword,A short copper sword.,Weapon,MainHand,2,0,0,False
-Long Wooden Sword,A long wooden sword.,Weapon,MainHand,2,0,0,False
-Long Copper Sword,A long copper sword,Weapon,MainHand,4,0,0,False
-Wooden Mace,A blunt mace made out of wood.,Weapon,MainHand,2,0,0,False
-Copper Helmet,A flexible helmet made out of copper.,Armor,Head,0,1,0,False
-Copper Chest,A flexible chest piece made of copper.,Armor,Torso,0,2,0,False
+Short Wooden Sword,A short wooden sword.,Weapon,MainHand,1,0,0,FALSE
+Short Copper Sword,A short copper sword.,Weapon,MainHand,2,0,0,FALSE
+Long Wooden Sword,A long wooden sword.,Weapon,MainHand,2,0,0,FALSE
+Long Copper Sword,A long copper sword,Weapon,MainHand,4,0,0,FALSE
+Wooden Mace,A blunt mace made out of wood.,Weapon,MainHand,2,0,0,FALSE
+Copper Helmet,A flexible helmet made out of copper.,Armor,Head,0,1,0,FALSE
+Copper Chest,A flexible chest piece made of copper.,Armor,Torso,0,2,0,FALSE

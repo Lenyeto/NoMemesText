@@ -8,3 +8,6 @@ C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.csproj.GenerateRe
 C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.exe
 C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.pdb
 C:\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.csprojResolveAssemblyReference.cache
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesText\NoMemesText\bin\Release\NoMemesText.exe.config
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.exe
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesText\NoMemesText\obj\Release\NoMemesText.pdb
