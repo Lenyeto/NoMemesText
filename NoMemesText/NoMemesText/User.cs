@@ -81,6 +81,7 @@ namespace NoMemesText
             xp = int.Parse(list[3]);
             level = int.Parse(list[4]);
             string[] itemsList = (list[5].Remove(0, 1)).Remove(list[5].Length - 1).Split(',');
+            
             foreach (string s in itemsList)
             {
                 items.Add(int.Parse(s));
