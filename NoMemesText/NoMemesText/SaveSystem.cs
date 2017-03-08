@@ -9,7 +9,7 @@ namespace NoMemesText
 {
     static class SaveSystem
     {
-        public static void saveData()
+        public static void savePlayers()
         {
             Dictionary<string, User> tmp = UserHandler.getInstance().getUsers();
 
@@ -34,13 +34,14 @@ namespace NoMemesText
             fs.Close();
         }
 
-        public static void loadData()
+        public static void loadPlayers()
         {
             string[] lines = File.ReadAllLines("../media/saves.sav");
 
             foreach (string s in lines)
             {
                 string[] tmp = s.Split('\t');
+                UserHandler.getInstance().addUser(tmp[0], new User(tmp.ToList().GetRange(1, tmp.Length)));
             }
         }
         

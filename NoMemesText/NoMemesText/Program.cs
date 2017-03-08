@@ -73,10 +73,13 @@ namespace NoMemesText
 
                 if (s.Equals("save"))
                 {
-                    SaveSystem.saveData();
+                    SaveSystem.savePlayers();
                 }
                 
-                    
+                if (s.Equals("load"))
+                {
+                    SaveSystem.loadPlayers();
+                }   
             }
 
             // Sets the email checker to stop looping.

@@ -15,6 +15,18 @@ namespace NoMemesText
         {
             return x.ToString() + "," + y.ToString();
         }
+
+        public static Coords Parse(string s)
+        {
+            string[] tmpS = s.Split(',');
+
+            Coords tmpCoords = new Coords();
+
+            tmpCoords.x = int.Parse(tmpS[0]);
+            tmpCoords.y = int.Parse(tmpS[1]);
+
+            return tmpCoords;
+        }
     }
 
 
@@ -56,6 +68,30 @@ namespace NoMemesText
             isNew = true;
             items = new List<int>();
             visited = new List<Coords>();
+        }
+
+        public User(List<string> list)
+        {
+            hasMessage = bool.Parse(list[0]);
+            message = list[1];
+            //string[] tmpPos = list[2].Split(',');
+            pos = Coords.Parse(list[2]);
+            //pos.x = int.Parse(tmpPos[0]);
+            //pos.y = int.Parse(tmpPos[1]);
+            xp = int.Parse(list[3]);
+            level = int.Parse(list[4]);
+            string[] itemsList = (list[5].Remove(0, 1)).Remove(list[5].Length - 1).Split(',');
+            foreach (string s in itemsList)
+            {
+                items.Add(int.Parse(s));
+            }
+            quest = int.Parse(list[6]);
+
+            string[] coordsList = (list[7].Remove(0, 1)).Remove(list[7].Length - 1).Split('.');
+            foreach (string s in coordsList)
+            {
+                visited.Add(Coords.Parse(s));
+            }
         }
 
         public override string ToString()
