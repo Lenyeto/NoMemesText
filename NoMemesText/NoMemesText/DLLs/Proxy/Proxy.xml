@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Limilabs.Proxy.HttpProxy.HttpProxyClient.SetCredentials(System.String,System.String)">
+            <summary>
+            Sets proxy credentials.
+            </summary>
+            <param name="proxyUser">Proxy authentication user name.</param>
+            <param name="proxyPassword">Proxy authentication password.</param>
+        </member>
+        <member name="P:Limilabs.Proxy.ProxyClientBase.ReceiveTimeout">
+            <summary>
+            Gets or sets the amount of time the underlying <see cref="T:System.Net.Sockets.Socket"/> will wait to receive data once a read operation is initiated.
+            </summary>
+        </member>
+        <member name="P:Limilabs.Proxy.ProxyClientBase.SendTimeout">
+            <summary>
+            Gets or sets the amount of time the underlying <see cref="T:System.Net.Sockets.Socket"/> will wait for a send operation to complete successfully.
+            </summary>
+        </member>
+        <member name="T:Limilabs.Proxy.Socks4Proxy.Socks4aProxyClient">
+            <remarks>
+            In Socks version 4A if the client cannot resolve the destination host's domain name to find its IP address the server will attempt to resolve it.
+            </remarks>
+        </member>
+        <member name="M:Limilabs.Proxy.Socks4Proxy.Socks4ProxyClient.SetCredentials(System.String)">
+            <summary>
+            Sets proxy credentials.
+            </summary>
+            <param name="proxyUserId">Proxy user identification information.</param>
+        </member>
+        <member name="M:Limilabs.Proxy.Socks5Proxy.Socks5ProxyClient.SetCredentials(System.String,System.String)">
+            <summary>
+            Sets proxy credentials.
+            </summary>
+            <param name="proxyUser">Proxy authentication user name.</param>
+            <param name="proxyPassword">Proxy authentication password.</param>
+        </member>
+        <member name="T:Limilabs.Proxy.Exceptions.ProxyException">
+            <summary>
+            This exception is thrown when proxy error occurs.   
+            </summary>
+        </member>
+        <member name="M:Limilabs.Proxy.Exceptions.ProxyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes new instance of ProxyException with serialized data.
+            </summary>
+            <param name="info">Serialized object data.</param>
+            <param name="context">Contextual information.</param>
+        </member>
+        <member name="T:Limilabs.Proxy.IProxyClient">
+            <summary>
+            Proxy client interface. This is the interface that all proxy clients implement.
+            </summary>
+        </member>
+        <member name="P:Limilabs.Proxy.IProxyClient.ReceiveTimeout">
+            <summary>
+            Gets or sets the amount of time the underlying <see cref="T:System.Net.Sockets.Socket"/> will wait to receive data once a read operation is initiated.
+            </summary>
+        </member>
+        <member name="P:Limilabs.Proxy.IProxyClient.SendTimeout">
+            <summary>
+            Gets or sets the amount of time the underlying <see cref="T:System.Net.Sockets.Socket"/> will wait for a send operation to complete successfully.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Proxy.IProxyClient.Connect(System.String,System.Int32)">
+            <summary>
+            Creates a remote TCP connection through a proxy server to the destination host on the destination port.
+            </summary>
+            <param name="destinationHost">Destination host name or IP address.</param>
+            <param name="destinationPort">Port number to connect to on the destination host.</param>
+            <returns>
+            Returns an open <see cref="T:System.Net.Sockets.Socket"/> object that can be used normally to communicate with the destination server
+            </returns>
+        </member>
+        <member name="M:Limilabs.Proxy.IProxyClient.BeginConnect(System.String,System.Int32,System.AsyncCallback)">
+            <summary>
+            Begins an asynchronous request for a proxy server connection. 
+            </summary>
+            <param name="destinationHost">Destination host name or IP address.</param>
+            <param name="destinationPort">Port number to connect to on the destination host.</param>
+            <param name="asyncCallback">The AsyncCallback delegate.</param>        
+            <returns>An IAsyncResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="M:Limilabs.Proxy.IProxyClient.EndConnect(System.IAsyncResult)">
+            <summary>
+            Ends a pending asynchronous proxy connection request, sends remote server connection request to the proxy server.
+            </summary>
+            <param name="result">Object that stores state information and any user defined data for this asynchronous operation.</param>
+            <returns>
+            Returns an open <see cref="T:System.Net.Sockets.Socket"/> object that can be used normally to communicate with the destination server
+            </returns>
+        </member>
+        <member name="T:Limilabs.Proxy.ProxyFactory">
+            <summary>
+            Factory class for creating proxy clients.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Proxy.ProxyFactory.#ctor">
+            <summary>
+            Creates new proxy factory class.
+            </summary>
+        </member>
+        <member name="M:Limilabs.Proxy.ProxyFactory.#ctor(System.Net.Sockets.AddressFamily)">
+            <summary>
+            Initializes new proxy factory class, with specified address family.
+            </summary>
+            <param name="addressFamily">Address family.</param>
+        </member>
+        <member name="M:Limilabs.Proxy.ProxyFactory.CreateProxy(Limilabs.Proxy.ProxyType,System.String)">
+            <summary>
+            Creates new proxy client.
+            </summary>
+            <param name="type">The type of proxy client to create.</param>
+            <param name="proxyHost">The proxy host or IP address.</param>
+            <returns>Proxy client object.</returns>
+        </member>
+        <member name="M:Limilabs.Proxy.ProxyFactory.CreateProxy(Limilabs.Proxy.ProxyType,System.String,System.Int32)">
+            <summary>
+            Factory method for creating new proxy client objects.  
+            </summary>
+            <param name="type">The type of proxy client to create.</param>
+            <param name="proxyHost">The proxy host or IP address.</param>
+            <param name="proxyPort">The proxy port number.</param>
+            <returns>Proxy client object.</returns>
+        </member>
+        <member name="M:Limilabs.Proxy.ProxyFactory.CreateProxy(Limilabs.Proxy.ProxyType,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Factory method for creating new proxy client objects.  
+            </summary>
+            <param name="type">The type of proxy client to create.</param>
+            <param name="proxyHost">The proxy host or IP address.</param>
+            <param name="proxyPort">The proxy port number.</param>
+            <param name="proxyUser">The proxy user.</param>
+            <param name="proxyPassword">The proxy password. This parameter is only used by Http and Socks5 proxy objects.</param>
+            <returns>Proxy client object.</returns>
+        </member>
+        <member name="T:Limilabs.Proxy.ProxyType">
+            <summary>
+            The type of proxy.
+            </summary>
+        </member>
+        <member name="F:Limilabs.Proxy.ProxyType.Http">
+            <summary>
+            HTTP proxy.
+            </summary>
+        </member>
+        <member name="F:Limilabs.Proxy.ProxyType.Socks4">
+            <summary>
+            SOCKS v4 proxy.
+            </summary>
+        </member>
+        <member name="F:Limilabs.Proxy.ProxyType.Socks4a">
+            <summary>
+            SOCKS v4a proxy.
+            </summary>
+        </member>
+        <member name="F:Limilabs.Proxy.ProxyType.Socks5">
+            <summary>
+            SOCKS v5 proxy.
+            </summary>
+        </member>
+    </members>
+</doc>
