@@ -57,6 +57,9 @@ namespace NoMemesText
         //The spots on the map that have been visited.
         public List<Coords> visited;
 
+        //Quests that have been completed
+        public List<int> questsCompleted;
+
         //Sets whether the player has a message or not.
         public void setHasMessage(bool b) { hasMessage = b; }
 
@@ -68,6 +71,13 @@ namespace NoMemesText
             isNew = true;
             items = new List<int>();
             visited = new List<Coords>();
+
+            for (int i = 0; i < 5; i++)
+            {
+                int tmpIndex;
+                Program.mItemDictionary.getRandomItemByType(ItemType.Weapon, out tmpIndex);
+                items.Add(tmpIndex);
+            }
         }
 
         public User(List<string> list)
@@ -94,7 +104,7 @@ namespace NoMemesText
                 visited.Add(Coords.Parse(s));
             }
         }
-
+        
         public override string ToString()
         {
             string tmp;
@@ -124,6 +134,14 @@ namespace NoMemesText
             {
                 tmp += c.ToString();
                 tmp += ".";
+            }
+            tmp += "}";
+            tmp += '\t';
+            tmp += "{";
+            foreach (int i in questsCompleted)
+            {
+                tmp += i.ToString();
+                tmp += ",";
             }
             tmp += "}";
 

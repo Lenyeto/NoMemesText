@@ -36,5 +36,10 @@ namespace NoMemesText
             Console.WriteLine("Created item with following information.");
             Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}", name, description, type, slot, damage, armor, value, quest);
         }
+
+        public override string ToString()
+        {
+            return mName + '\t' + mDescription + '\t' + mType + '\t' + mSlot + '\t' + mDMG + '\t' + mArmor + '\t' + mValue;
+        }
     }
 }

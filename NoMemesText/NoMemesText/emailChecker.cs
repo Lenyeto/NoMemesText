@@ -78,12 +78,48 @@ namespace NoMemesText
                         
                             Map.getInstance().createImage();
                             Program.sendMessageWithAttachment("", email.Sender.Address, "../media/tmpMap.png");
-                            //Program.sendMessageWithAttachment("", email.Sender.Address, "../media/tmpMap.jpeg");
                             continue;
                         }
                         else if (command.ToLower().Contains("look"))
                         {
                             tmp.message = choiceProcessor.getTextLocation(tmp);
+                            tmp.setHasMessage(true);
+                        }
+                        else if (command.ToLower().Contains("drop"))
+                        {
+                            string[] tmpArguments = command.ToLower().Split(' ');
+
+                            if (tmpArguments[1] == "item")
+                            {
+                                int index;
+                                if (int.TryParse(tmpArguments[2], out index))
+                                {
+                                    if (index > tmp.items.Count - 1)
+                                    {
+                                        tmp.message = "Please choose a number under the max amount of items in your inventory.";
+                                    } else
+                                    {
+                                        tmp.message = "Dropped " + Program.mItemDictionary.getItem(tmp.items[index]);
+                                        tmp.items.RemoveAt(index);
+                                    }
+                                } else
+                                {
+                                    tmp.message = "Please use the command drop as such : 'drop item <index (as an integer)>'";
+                                }
+                            } else if (tmpArguments[1] == "quest")
+                            {
+
+                            } else
+                            {
+                                tmp.message = "Please use the command drop in this way 'drop <item|quest> <index of item>'";
+                                
+                            }
+                            tmp.setHasMessage(true);
+                        }
+                        else if (command.ToLower().Contains("inventory"))
+                        {
+                            tmp.message = Program.mItemDictionary.getInventory(tmp.items);
+                            tmp.setHasMessage(true);
                         }
                         else
                         {

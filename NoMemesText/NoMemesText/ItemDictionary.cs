@@ -10,11 +10,11 @@ namespace NoMemesText
 {
     public class ItemDictionary
     {
-         ArrayList mItemArray;
+         List<Item> mItemArray;
 
         public ItemDictionary()
         {
-            mItemArray = new ArrayList();
+            mItemArray = new List<Item>();
 
 
         }
@@ -39,7 +39,7 @@ namespace NoMemesText
 
         public Item[] getItemsByType(ItemType it)
         {
-            ArrayList tmpItems = new ArrayList();
+            List<Item> tmpItems = new List<Item>();
             foreach (Item i in mItemArray)
             {
                 if (i.mType == it)
@@ -51,14 +51,16 @@ namespace NoMemesText
             return (Item[]) tmpItems.ToArray();
         }
 
-        public Item getRandomItemByType(ItemType it)
+        public Item getRandomItemByType(ItemType it, out int index)
         {
             Item[] itemPool = getItemsByType(it);
 
             int tmpLength = itemPool.Length;
             Random r = new Random();
+            
+            index = r.Next(tmpLength);
 
-            return itemPool[r.Next(tmpLength)];
+            return itemPool[index];
         }
 
         public void loadItemsFromFile(string fileName)
@@ -93,6 +95,24 @@ namespace NoMemesText
 
                 addItem(tmp);
             }
+        }
+
+        public string getInventory(List<int> i)
+        {
+            string tmp = "";
+
+            foreach (int i2 in i)
+            {
+                tmp += mItemArray[i2].ToString();
+                tmp += '\n';
+            }
+
+            return tmp;
+        }
+
+        public Item getItem(int i)
+        {
+            return mItemArray[i];
         }
     }
 }

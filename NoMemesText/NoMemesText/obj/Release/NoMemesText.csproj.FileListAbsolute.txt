@@ -1,4 +1,3 @@
-C:\NoMemesText\NoMemesText\NoMemesText\bin\Release\NoMemesText.exe.config
 C:\NoMemesText\NoMemesText\NoMemesText\bin\Release\NoMemesText.exe
 C:\NoMemesText\NoMemesText\NoMemesText\bin\Release\NoMemesText.pdb
 C:\NoMemesText\NoMemesText\NoMemesText\bin\Release\Mail.dll
