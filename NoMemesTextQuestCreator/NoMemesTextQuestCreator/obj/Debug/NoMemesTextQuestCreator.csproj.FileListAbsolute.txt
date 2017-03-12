@@ -7,3 +7,10 @@ c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMe
 c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.csproj.GenerateResource.Cache
 c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.exe
 c:\users\josh\documents\visual studio 2015\Projects\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.pdb
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\bin\Debug\NoMemesTextQuestCreator.exe.config
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.exe
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.pdb
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.csprojResolveAssemblyReference.cache
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.Form1.resources
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.Properties.Resources.resources
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.csproj.GenerateResource.Cache
