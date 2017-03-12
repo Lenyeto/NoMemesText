@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace NoMemesTextQuestCreator
 {
     public enum questType { Deliver, Kill, Gather, Goto };
@@ -33,7 +34,7 @@ namespace NoMemesTextQuestCreator
         
 
         
-
+        
         //Coords placeToKill;
 
         public Quest(string name, string description, string questType, bool hasReward, string creatureToKill = "None", int XPReward = 0, int goldReward = 0, int itemIDReward = 0 )

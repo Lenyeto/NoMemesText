@@ -22,6 +22,8 @@ namespace NoMemesTextQuestCreator
 
         public int mAmountToKill;
 
+
+
         questCondition mCond;
 
         creatureType mCreatureToKill;
