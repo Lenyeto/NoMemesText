@@ -71,18 +71,87 @@ namespace NoMemesText
                         {
                             tmp.setHasMessage(true);
 
-                            tmp.message = "map\nclear";
+                            tmp.message = "map | sends you a map - \nclear | deletes your save - \nwalk | travel in a direction one space -\ninventory | shows your inventory -";
                         }
                         else if (command.ToLower().Contains("map"))
                         {
                         
-                            Map.getInstance().createImage();
+                            //Map.getInstance().createImage();
+                            Map.getInstance().createFOGMap(tmp);
                             Program.sendMessageWithAttachment("", email.Sender.Address, "../media/tmpMap.png");
                             continue;
                         }
                         else if (command.ToLower().Contains("look"))
                         {
-                            tmp.message = choiceProcessor.getTextLocation(tmp);
+                            string[] tmpArray = command.ToLower().Split(' ');
+                            if (tmpArray.Length == 1)
+                            {
+                                tmp.message = choiceProcessor.getTextLocation(tmp);
+                            } else
+                            {
+                                User tmp2 = new User();
+                                switch (tmpArray[1])
+                                {
+                                    case "north":
+                                        tmp2.pos = tmp.pos;
+                                        tmp2.pos.x = tmp2.pos.y - 1;
+                                        tmp.message = choiceProcessor.getTextLocation(tmp2);
+                                        break;
+                                    case "east":
+                                        tmp2.pos = tmp.pos;
+                                        tmp2.pos.x = tmp2.pos.x + 1;
+                                        tmp.message = choiceProcessor.getTextLocation(tmp2);
+                                        break;
+                                    case "south":
+                                        tmp2.pos = tmp.pos;
+                                        tmp2.pos.x = tmp2.pos.y + 1;
+                                        tmp.message = choiceProcessor.getTextLocation(tmp2);
+                                        break;
+                                    case "west":
+                                        tmp2.pos = tmp.pos;
+                                        tmp2.pos.x = tmp2.pos.x - 1;
+                                        tmp.message = choiceProcessor.getTextLocation(tmp2);
+                                        break;
+                                    default:
+                                        tmp.message = "Please specify the direction you want to look as 'north', 'south', 'east', 'west'";
+                                        break;
+                                }
+                            }
+                            tmp.setHasMessage(true);
+                        } else if (command.ToLower().Contains("walk"))
+                        {
+                            string[] tmpArray = command.ToLower().Split(' ');
+                            
+                            switch (tmpArray[1])
+                            {
+                                case "north":
+                                    if (tmp.move(direction.North, 1))
+                                    {
+                                        tmp.message = "You have walked north";
+                                    }
+                                    break;
+                                case "east":
+                                    if (tmp.move(direction.East, 1))
+                                    {
+                                        tmp.message = "You have walked east";
+                                    }
+                                    break;
+                                case "south":
+                                    if (tmp.move(direction.South, 1))
+                                    {
+                                        tmp.message = "You have walked south";
+                                    }
+                                    break;
+                                case "west":
+                                    if (tmp.move(direction.West, 1))
+                                    {
+                                        tmp.message = "You have walked west";
+                                    }
+                                    break;
+                                default:
+                                    tmp.message = "Please specify the direction you want to walk as 'north', 'south', 'east', 'west'";
+                                    break;
+                            }
                             tmp.setHasMessage(true);
                         }
                         else if (command.ToLower().Contains("equip"))

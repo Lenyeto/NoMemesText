@@ -29,6 +29,7 @@ namespace NoMemesText
         }
     }
 
+<<<<<<< HEAD
 
     public struct equipedItems
     {
@@ -45,6 +46,9 @@ namespace NoMemesText
         }
     }
 
+=======
+    public enum direction { North, East, West, South };
+>>>>>>> Lenyeto
 
     public class User
     {
@@ -97,6 +101,8 @@ namespace NoMemesText
                 Program.mItemDictionary.getRandomItemByType(ItemType.Weapon, out tmpIndex);
                 items.Add(tmpIndex);
             }
+
+            visited.Add(pos);
         }
 
         public User(List<string> list)
@@ -110,7 +116,7 @@ namespace NoMemesText
             xp = int.Parse(list[3]);
             level = int.Parse(list[4]);
             string[] itemsList = (list[5].Remove(0, 1)).Remove(list[5].Length - 1).Split(',');
-            
+
             foreach (string s in itemsList)
             {
                 items.Add(int.Parse(s));
@@ -123,7 +129,7 @@ namespace NoMemesText
                 visited.Add(Coords.Parse(s));
             }
         }
-        
+
         public override string ToString()
         {
             string tmp;
@@ -170,5 +176,47 @@ namespace NoMemesText
             return tmp;
         }
 
+
+        public bool move(direction d, uint distance)
+        {
+            switch (d)
+            {
+                case direction.North:
+                    if (pos.y - (int) distance > 0)
+                    {
+                        pos.y = pos.y - (int) distance;
+                        visited.Add(pos);
+                        return true;
+                    }
+                    break;
+                case direction.East:
+                    if (pos.x + (int) distance < Map.getInstance().getMapWidth())
+                    {
+                        pos.x = pos.x + (int) distance;
+                        visited.Add(pos);
+                        return true;
+                    }
+                    break;
+                case direction.West:
+                    if (pos.x - (int)distance > 0)
+                    {
+                        pos.x = pos.x - (int)distance;
+                        visited.Add(pos);
+                        return true;
+                    }
+                    break;
+                case direction.South:
+                    if (pos.y + (int)distance < Map.getInstance().getMapHeight())
+                    {
+                        pos.y = pos.y + (int)distance;
+                        visited.Add(pos);
+                        return true;
+                    }
+                    break;
+            }
+
+            return false;
+        }
     }
+
 }
