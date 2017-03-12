@@ -91,9 +91,49 @@ namespace NoMemesTextQuestCreator
 
         }
 
-        private void deliverCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            //tmpQuest.
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Enum.TryParse("Deliver", out tmpQuest.mQuestType);
+        }
+
+        private void killRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Enum.TryParse("Kill", out tmpQuest.mQuestType);
+        }
+
+        private void gatherRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Enum.TryParse("Gather", out tmpQuest.mQuestType);
+        }
+
+        private void gotoRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Enum.TryParse("Goto", out tmpQuest.mQuestType);
+        }
+
+        private void beastRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Enum.TryParse("Beast", out tmpQuest.mCreatureToKill);
+        }
+
+        private void humanoidRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Enum.TryParse("Humanoid", out tmpQuest.mCreatureToKill);
+        }
+
+        private void undeadRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Enum.TryParse("Undead", out tmpQuest.mCreatureToKill);
+        }
+
+        private void elementalRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Enum.TryParse("Elemental", out tmpQuest.mCreatureToKill);
         }
     }
 }

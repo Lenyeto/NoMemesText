@@ -14,3 +14,5 @@ C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQu
 C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.Form1.resources
 C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.Properties.Resources.resources
 C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\obj\Debug\NoMemesTextQuestCreator.csproj.GenerateResource.Cache
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\bin\Debug\NoMemesTextQuestCreator.exe
+C:\Users\Josh\Documents\GitHub\NoMemesText\NoMemesTextQuestCreator\NoMemesTextQuestCreator\bin\Debug\NoMemesTextQuestCreator.pdb

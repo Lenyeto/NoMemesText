@@ -33,7 +33,6 @@
             this.QuestNameBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.questDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -42,19 +41,22 @@
             this.goldRewardTextBox = new System.Windows.Forms.TextBox();
             this.xpRewardTextBox = new System.Windows.Forms.TextBox();
             this.itemRewardTextBox = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.deliverCheckBox = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.deliverRadioButton = new System.Windows.Forms.RadioButton();
+            this.questTypeBox = new System.Windows.Forms.GroupBox();
+            this.gotoRadioButton = new System.Windows.Forms.RadioButton();
+            this.gatherRadioButton = new System.Windows.Forms.RadioButton();
+            this.killRadioButton = new System.Windows.Forms.RadioButton();
+            this.killGroupBox = new System.Windows.Forms.GroupBox();
+            this.beastRadioButton = new System.Windows.Forms.RadioButton();
+            this.humanoidRadioButton = new System.Windows.Forms.RadioButton();
+            this.undeadRadioButton = new System.Windows.Forms.RadioButton();
+            this.elementalRadioButton = new System.Windows.Forms.RadioButton();
+            this.questTypeBox.SuspendLayout();
+            this.killGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -99,17 +101,6 @@
             this.questDescriptionTextBox.Size = new System.Drawing.Size(382, 315);
             this.questDescriptionTextBox.TabIndex = 4;
             this.questDescriptionTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(749, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Quest Type";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -189,46 +180,6 @@
             this.itemRewardTextBox.TabIndex = 17;
             this.itemRewardTextBox.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(294, 533);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(140, 24);
-            this.checkBox2.TabIndex = 18;
-            this.checkBox2.Text = "beastCheckBox";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(294, 571);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(170, 24);
-            this.checkBox3.TabIndex = 19;
-            this.checkBox3.Text = "humanoidCheckBox";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(294, 615);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(154, 24);
-            this.checkBox4.TabIndex = 20;
-            this.checkBox4.Text = "undeadCheckBox";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(294, 656);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(169, 24);
-            this.checkBox5.TabIndex = 21;
-            this.checkBox5.Text = "elementalCheckBox";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -239,57 +190,6 @@
             this.label9.Size = new System.Drawing.Size(299, 16);
             this.label9.TabIndex = 23;
             this.label9.Text = "ONLY SELECT ONE CHECK BOX AT THIS TIME";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(291, 514);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 16);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Quest Type Kill";
-            // 
-            // deliverCheckBox
-            // 
-            this.deliverCheckBox.AutoSize = true;
-            this.deliverCheckBox.Location = new System.Drawing.Point(753, 121);
-            this.deliverCheckBox.Name = "deliverCheckBox";
-            this.deliverCheckBox.Size = new System.Drawing.Size(73, 24);
-            this.deliverCheckBox.TabIndex = 25;
-            this.deliverCheckBox.Text = "deliver";
-            this.deliverCheckBox.UseVisualStyleBackColor = true;
-            this.deliverCheckBox.CheckedChanged += new System.EventHandler(this.deliverCheckBox_CheckedChanged);
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(753, 151);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(45, 24);
-            this.checkBox7.TabIndex = 26;
-            this.checkBox7.Text = "kill";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(753, 181);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(74, 24);
-            this.checkBox8.TabIndex = 27;
-            this.checkBox8.Text = "gather";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(753, 211);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(60, 24);
-            this.checkBox9.TabIndex = 28;
-            this.checkBox9.Text = "goto";
-            this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -321,24 +221,142 @@
             this.label12.TabIndex = 31;
             this.label12.Text = "Quest Type Goto";
             // 
+            // deliverRadioButton
+            // 
+            this.deliverRadioButton.AutoSize = true;
+            this.deliverRadioButton.Location = new System.Drawing.Point(19, 44);
+            this.deliverRadioButton.Name = "deliverRadioButton";
+            this.deliverRadioButton.Size = new System.Drawing.Size(82, 24);
+            this.deliverRadioButton.TabIndex = 32;
+            this.deliverRadioButton.TabStop = true;
+            this.deliverRadioButton.Text = "Deliver";
+            this.deliverRadioButton.UseVisualStyleBackColor = true;
+            this.deliverRadioButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // questTypeBox
+            // 
+            this.questTypeBox.Controls.Add(this.gotoRadioButton);
+            this.questTypeBox.Controls.Add(this.gatherRadioButton);
+            this.questTypeBox.Controls.Add(this.killRadioButton);
+            this.questTypeBox.Controls.Add(this.deliverRadioButton);
+            this.questTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questTypeBox.Location = new System.Drawing.Point(753, 57);
+            this.questTypeBox.Name = "questTypeBox";
+            this.questTypeBox.Size = new System.Drawing.Size(200, 221);
+            this.questTypeBox.TabIndex = 33;
+            this.questTypeBox.TabStop = false;
+            this.questTypeBox.Text = "Quest Type";
+            this.questTypeBox.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // gotoRadioButton
+            // 
+            this.gotoRadioButton.AutoSize = true;
+            this.gotoRadioButton.Location = new System.Drawing.Point(19, 181);
+            this.gotoRadioButton.Name = "gotoRadioButton";
+            this.gotoRadioButton.Size = new System.Drawing.Size(67, 24);
+            this.gotoRadioButton.TabIndex = 34;
+            this.gotoRadioButton.TabStop = true;
+            this.gotoRadioButton.Text = "Goto";
+            this.gotoRadioButton.UseVisualStyleBackColor = true;
+            this.gotoRadioButton.CheckedChanged += new System.EventHandler(this.gotoRadioButton_CheckedChanged);
+            // 
+            // gatherRadioButton
+            // 
+            this.gatherRadioButton.AutoSize = true;
+            this.gatherRadioButton.Location = new System.Drawing.Point(20, 136);
+            this.gatherRadioButton.Name = "gatherRadioButton";
+            this.gatherRadioButton.Size = new System.Drawing.Size(83, 24);
+            this.gatherRadioButton.TabIndex = 34;
+            this.gatherRadioButton.TabStop = true;
+            this.gatherRadioButton.Text = "Gather";
+            this.gatherRadioButton.UseVisualStyleBackColor = true;
+            this.gatherRadioButton.CheckedChanged += new System.EventHandler(this.gatherRadioButton_CheckedChanged);
+            // 
+            // killRadioButton
+            // 
+            this.killRadioButton.AutoSize = true;
+            this.killRadioButton.Location = new System.Drawing.Point(20, 90);
+            this.killRadioButton.Name = "killRadioButton";
+            this.killRadioButton.Size = new System.Drawing.Size(50, 24);
+            this.killRadioButton.TabIndex = 33;
+            this.killRadioButton.TabStop = true;
+            this.killRadioButton.Text = "Kill";
+            this.killRadioButton.UseVisualStyleBackColor = true;
+            this.killRadioButton.CheckedChanged += new System.EventHandler(this.killRadioButton_CheckedChanged);
+            // 
+            // killGroupBox
+            // 
+            this.killGroupBox.Controls.Add(this.elementalRadioButton);
+            this.killGroupBox.Controls.Add(this.humanoidRadioButton);
+            this.killGroupBox.Controls.Add(this.beastRadioButton);
+            this.killGroupBox.Controls.Add(this.undeadRadioButton);
+            this.killGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.killGroupBox.Location = new System.Drawing.Point(300, 514);
+            this.killGroupBox.Name = "killGroupBox";
+            this.killGroupBox.Size = new System.Drawing.Size(200, 168);
+            this.killGroupBox.TabIndex = 34;
+            this.killGroupBox.TabStop = false;
+            this.killGroupBox.Text = "Quest Type Kill";
+            // 
+            // beastRadioButton
+            // 
+            this.beastRadioButton.AutoSize = true;
+            this.beastRadioButton.Location = new System.Drawing.Point(19, 26);
+            this.beastRadioButton.Name = "beastRadioButton";
+            this.beastRadioButton.Size = new System.Drawing.Size(74, 24);
+            this.beastRadioButton.TabIndex = 0;
+            this.beastRadioButton.TabStop = true;
+            this.beastRadioButton.Text = "Beast";
+            this.beastRadioButton.UseVisualStyleBackColor = true;
+            this.beastRadioButton.CheckedChanged += new System.EventHandler(this.beastRadioButton_CheckedChanged);
+            // 
+            // humanoidRadioButton
+            // 
+            this.humanoidRadioButton.AutoSize = true;
+            this.humanoidRadioButton.Location = new System.Drawing.Point(19, 56);
+            this.humanoidRadioButton.Name = "humanoidRadioButton";
+            this.humanoidRadioButton.Size = new System.Drawing.Size(108, 24);
+            this.humanoidRadioButton.TabIndex = 1;
+            this.humanoidRadioButton.TabStop = true;
+            this.humanoidRadioButton.Text = "Humanoid";
+            this.humanoidRadioButton.UseVisualStyleBackColor = true;
+            this.humanoidRadioButton.CheckedChanged += new System.EventHandler(this.humanoidRadioButton_CheckedChanged);
+            // 
+            // undeadRadioButton
+            // 
+            this.undeadRadioButton.AutoSize = true;
+            this.undeadRadioButton.Location = new System.Drawing.Point(20, 86);
+            this.undeadRadioButton.Name = "undeadRadioButton";
+            this.undeadRadioButton.Size = new System.Drawing.Size(90, 24);
+            this.undeadRadioButton.TabIndex = 2;
+            this.undeadRadioButton.TabStop = true;
+            this.undeadRadioButton.Text = "Undead";
+            this.undeadRadioButton.UseVisualStyleBackColor = true;
+            this.undeadRadioButton.CheckedChanged += new System.EventHandler(this.undeadRadioButton_CheckedChanged);
+            // 
+            // elementalRadioButton
+            // 
+            this.elementalRadioButton.AutoSize = true;
+            this.elementalRadioButton.Location = new System.Drawing.Point(19, 116);
+            this.elementalRadioButton.Name = "elementalRadioButton";
+            this.elementalRadioButton.Size = new System.Drawing.Size(107, 24);
+            this.elementalRadioButton.TabIndex = 3;
+            this.elementalRadioButton.TabStop = true;
+            this.elementalRadioButton.Text = "Elemental";
+            this.elementalRadioButton.UseVisualStyleBackColor = true;
+            this.elementalRadioButton.CheckedChanged += new System.EventHandler(this.elementalRadioButton_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 749);
+            this.Controls.Add(this.killGroupBox);
+            this.Controls.Add(this.questTypeBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.deliverCheckBox);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.itemRewardTextBox);
             this.Controls.Add(this.xpRewardTextBox);
             this.Controls.Add(this.goldRewardTextBox);
@@ -347,7 +365,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.questDescriptionTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.QuestNameBox);
@@ -359,6 +376,10 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quests";
+            this.questTypeBox.ResumeLayout(false);
+            this.questTypeBox.PerformLayout();
+            this.killGroupBox.ResumeLayout(false);
+            this.killGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,7 +390,6 @@
         private System.Windows.Forms.TextBox QuestNameBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox questDescriptionTextBox;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -378,19 +398,20 @@
         private System.Windows.Forms.TextBox goldRewardTextBox;
         private System.Windows.Forms.TextBox xpRewardTextBox;
         private System.Windows.Forms.TextBox itemRewardTextBox;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox deliverCheckBox;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RadioButton deliverRadioButton;
+        private System.Windows.Forms.GroupBox questTypeBox;
+        private System.Windows.Forms.RadioButton gotoRadioButton;
+        private System.Windows.Forms.RadioButton gatherRadioButton;
+        private System.Windows.Forms.RadioButton killRadioButton;
+        private System.Windows.Forms.GroupBox killGroupBox;
+        private System.Windows.Forms.RadioButton elementalRadioButton;
+        private System.Windows.Forms.RadioButton humanoidRadioButton;
+        private System.Windows.Forms.RadioButton beastRadioButton;
+        private System.Windows.Forms.RadioButton undeadRadioButton;
     }
 }
 

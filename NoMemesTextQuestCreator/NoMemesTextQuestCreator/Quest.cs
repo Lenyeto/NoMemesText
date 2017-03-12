@@ -8,8 +8,8 @@ namespace NoMemesTextQuestCreator
 {
     public enum questType { Deliver, Kill, Gather, Goto };
 
-    public enum creatureType { Beast, Humanoid, Undead, Elemental };
-
+    public enum creatureType { Beast, Humanoid, Undead, Elemental, None };
+    
     public class Quest
     {
         public string mName;
@@ -26,9 +26,9 @@ namespace NoMemesTextQuestCreator
         public bool mHasReward;
 
 
-        questType mQuestType;
+        public questType mQuestType;
 
-        creatureType mCreatureToKill;
+        public creatureType mCreatureToKill;
 
         
 
@@ -36,10 +36,10 @@ namespace NoMemesTextQuestCreator
 
         //Coords placeToKill;
 
-        public Quest(string name, string description, string questType, bool hasReward, int XPReward = 0, int goldReward = 0, int itemIDReward = 0 )
+        public Quest(string name, string description, string questType, bool hasReward, string creatureToKill = "None", int XPReward = 0, int goldReward = 0, int itemIDReward = 0 )
         {
             Enum.TryParse(questType, out mQuestType);
-
+            Enum.TryParse(creatureToKill, out mCreatureToKill);
 
             mName = name;
             mDescription = description;
