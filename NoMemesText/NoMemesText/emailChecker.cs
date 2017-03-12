@@ -85,6 +85,56 @@ namespace NoMemesText
                             tmp.message = choiceProcessor.getTextLocation(tmp);
                             tmp.setHasMessage(true);
                         }
+                        else if (command.ToLower().Contains("equip"))
+                        {
+                            string[] tmpArguments = command.ToLower().Split(' ');
+
+                            int index;
+                            if (int.TryParse(tmpArguments[1], out index))
+                            {
+                                if (index > tmp.items.Count - 1)
+                                {
+                                    tmp.message = "Please choose a number under the max amount of items in your inventory.";
+                                }
+                                else
+                                {
+                                    ItemType tmpItemType = Program.mItemDictionary.getItem(tmp.items[index]).mType;
+                                    ItemSlot tmpItemSlot = Program.mItemDictionary.getItem(tmp.items[index]).mSlot;
+                                    if (tmpItemType == ItemType.Armor || tmpItemType == ItemType.Weapon)
+                                    {
+                                        switch (tmpItemSlot)
+                                        {
+                                            case ItemSlot.Head:
+                                                tmp.equiped.eHead = tmp.items[index];
+                                                break;
+                                            case ItemSlot.Feet:
+                                                tmp.equiped.eFeet = tmp.items[index];
+                                                break;
+                                            case ItemSlot.Torso:
+                                                tmp.equiped.eTorso = tmp.items[index];
+                                                break;
+                                            case ItemSlot.Legs:
+                                                tmp.equiped.eLegs = tmp.items[index];
+                                                break;
+                                            case ItemSlot.MainHand:
+                                                tmp.equiped.eMainHand = tmp.items[index];
+                                                break;
+                                            case ItemSlot.OffHand:
+                                                tmp.equiped.eOffHand = tmp.items[index];
+                                                break;
+                                        }
+
+                                        tmp.message = "Equiped " + Program.mItemDictionary.getItem(tmp.items[index]).ToString();
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                tmp.message = "Please use the command drop as such : 'drop item <index (as an integer)>'";
+                            }
+
+                            tmp.setHasMessage(true);
+                        }
                         else if (command.ToLower().Contains("drop"))
                         {
                             string[] tmpArguments = command.ToLower().Split(' ');
@@ -106,12 +156,9 @@ namespace NoMemesText
                                 {
                                     tmp.message = "Please use the command drop as such : 'drop item <index (as an integer)>'";
                                 }
-                            } else if (tmpArguments[1] == "quest")
-                            {
-
                             } else
                             {
-                                tmp.message = "Please use the command drop in this way 'drop <item|quest> <index of item>'";
+                                tmp.message = "Please use the command drop in this way 'drop <item> <index of item>'";
                                 
                             }
                             tmp.setHasMessage(true);

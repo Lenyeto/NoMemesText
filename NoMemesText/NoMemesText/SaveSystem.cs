@@ -25,8 +25,7 @@ namespace NoMemesText
             }
 
             System.IO.File.WriteAllText("../media/saves.sav", tmpStringToWrite);
-
-            //fs.Close();
+            
         }
 
         public static void loadPlayers()

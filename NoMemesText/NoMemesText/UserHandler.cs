@@ -58,6 +58,7 @@ namespace NoMemesText
                         //newU.hasMessage = false;
                         User tm = u.Value;
                         tm.hasMessage = false;
+                        tm.message = "Null";
                         users[u.Key] = tm;
                     }
                 }

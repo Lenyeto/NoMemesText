@@ -30,9 +30,27 @@ namespace NoMemesText
     }
 
 
+    public struct equipedItems
+    {
+        public int eHead;
+        public int eTorso;
+        public int eLegs;
+        public int eFeet;
+        public int eMainHand;
+        public int eOffHand;
+
+        public override string ToString()
+        {
+            return "{" + eHead + ',' + eTorso + ',' + eLegs + ',' + eFeet + ',' + eMainHand + ',' + eOffHand + "}";
+        }
+    }
+
 
     public class User
     {
+        //The items the player has equiped.
+        public equipedItems equiped;
+
         //Whether or not the player has a pending message.
         public bool hasMessage;
 
@@ -71,6 +89,7 @@ namespace NoMemesText
             isNew = true;
             items = new List<int>();
             visited = new List<Coords>();
+            questsCompleted = new List<int>();
 
             for (int i = 0; i < 5; i++)
             {
@@ -145,6 +164,8 @@ namespace NoMemesText
             }
             tmp += "}";
 
+            tmp += '\t';
+            tmp += equiped.ToString();
 
             return tmp;
         }
